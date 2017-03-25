@@ -1,0 +1,82 @@
+<DOCTYPE html>
+    <html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    </head>
+
+    <body class="container">
+        <div class="row" id="shell">
+            <div id="outerScreen">
+                <content id="onlight"></content>
+                <content id="innerScreen">
+                    <p id="timer">question here</p>
+                </content>
+                <br>
+            </div>
+            <element id="daPad"></element>
+            <element id="speaker">
+                </elemnt>
+                <div id="start"></div>
+                <div id="select"></div>
+        </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+        <script type="text/javascript">
+        var timer = 0;
+
+
+
+
+
+        $(function() {
+
+            var triviaNum = document.getElementById('innerScreen');
+
+            var trivia = [{
+                question: 'Zelda is princess.',
+                choices: ['true', 'false'],
+                correctAnswer: 1
+            }, {
+                question: 'Mario is a carpenter.',
+                choices: ['true', 'false'],
+                correctAnswer: 2
+            }, {
+                question: 'Nintendo was founded in 1880.',
+                choices: ['true', 'false'],
+                correctAnswer: 1
+            }, {
+                question: 'Nintendo first worked with Disney in 1959.',
+                choices: ['true', 'false'],
+                correctAnswer: 1
+            }, {
+                question: 'Donkey Kong was originally a villian.',
+                choices: ['true', 'false'],
+                correctAnswer: 1,
+            }, {
+                question: 'Mario was originally named Jumpman.',
+                choices: ['true', 'false'],
+                correctAnswer: 1
+            }];
+
+            var i = 0;
+            var length1 = trivia.length;
+            var correctAnswer = 0;
+
+
+
+        function showT(qNum) {
+            var triviaQuestion = trivia[i];
+            triviaNum.innerScreen = triviaQuestion.question;
+        }
+
+
+
+        });
+        </script>
+    </body>
+
+    </html>
